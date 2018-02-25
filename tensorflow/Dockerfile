@@ -28,3 +28,5 @@ RUN git clone -b r1.5 https://github.com/tensorflow/tensorflow
 ADD generate_packages_script.sh /code/tensorflow/
 
 WORKDIR /code/tensorflow
+RUN chmod +x generate_packages_script.sh
+CMD ["./generate_packages_script.sh"]
